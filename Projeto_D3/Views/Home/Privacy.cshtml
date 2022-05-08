@@ -1,0 +1,51 @@
+﻿@model Candidato
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("Creates", "Candidato",FormMethod.Post)){
+
+
+<h1 class="display-4"><b>Formulário de Candidatura</b></h1>
+
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><b>Nome do Candidato</b></label>
+    <input type="text" name="NomeCand" class="form-control" id="CRM" aria-describedby="emailHelp" placeholder="Seu nome">
+    <small id="CRM" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1"><b>Nível</b></label>
+    <input type="text" name="Nivel" class="form-control" id="Nome" aria-describedby="emailHelp" placeholder="Junior, Pleno e Sênior">
+    <small id="Nome" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1"><b>Localização</b></label>
+    <input type="text" name="Localizacao" class="form-control" id="Nome" aria-describedby="emailHelp" placeholder="Cidade-ESTADO">
+    <small id="Nome" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1"><b>Telefone</b></label>
+    <input type="text" name="Telefone" class="form-control" id="Nome" aria-describedby="emailHelp" placeholder="(DDD) 9 9999-9999">
+    <small id="Nome" class="form-text text-muted"></small>
+  </div>
+
+  <label for="exampleInputEmail1"><b>Tecnologias Utilizadas</b></label> 
+  
+     <select asp-for="Tecnologia" class="custom-select my-1 mr-sm-2" id="Tecnologia">
+      <option>Java</option>
+      <option>C#</option>
+      <option>PhP</option>
+    </select>
+<br/>
+   <center>
+  <button type="submit" class="btn btn-success">Enviar</button>
+  <button type="reset" class="btn btn-dark">Limpar</button>
+  </center>
+</form>
+
+}

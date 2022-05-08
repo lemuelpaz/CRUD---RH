@@ -1,0 +1,59 @@
+﻿@model Cadastro
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using (Html.BeginForm("Create", "Home",FormMethod.Post)){
+
+
+<h1 class="display-4"><b>Cadastro de novas vagas.</b></h1>
+
+
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1"><b>Cargo da Vaga</b></label>
+    <input type="text" name="CRM" class="form-control" id="CRM" aria-describedby="emailHelp" placeholder="Sua resposta">
+    <small id="CRM" class="form-text text-muted"></small>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1"><b>Nível</b></label>
+    <input type="text" name="Nome" class="form-control" id="Nome" aria-describedby="emailHelp" placeholder="Sua resposta">
+    <small id="Nome" class="form-text text-muted"></small>
+  </div>
+
+   <center>
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalExemplo">Enviar</button>
+  <button type="reset" class="btn btn-dark">Limpar</button>
+  </center>
+
+          
+  <!-- Botão para acionar modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">AVISO!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Você está adicionando adicionando uma nova vaga para o Sistema de Cadastramento de Vagas
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger">Salvar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</form>
+
+ 
+
+}

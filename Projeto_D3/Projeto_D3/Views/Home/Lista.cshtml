@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Projeto_D3.Models.Cadastro>
+
+
+    <h1>VAGAS DISPONÍVEIS</h1>
+<table class="table table-bordered">
+                      <thead class="thead-light">   
+                         <tr>
+                              <th scope="col"><center>Vaga</center></th>  
+                              <th scope="col"><center>Nivel</center></th
+                         </tr>
+                      </thead>
+                      <tbody  id="tableid">
+                        </br>
+                      @if (Model != null)
+                              {
+                                      foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <center>
+                                                    @Html.DisplayFor(modelItem => item.CRM)
+                                                    </center>
+                                                </td>
+
+                                                <td>
+                                                    <center>
+                                                    @Html.DisplayFor(modelItem => item.Nome)
+                                                    </center>
+                                                </td>    
+                                                
+                                               
+                </tr>
+            }
+        } 
+        else
+        {
+            
+        }
+    </tbody>
+        </table>
